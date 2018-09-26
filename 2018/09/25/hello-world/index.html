@@ -132,7 +132,7 @@ crossorigin="anonymous"></script>
 					<div class="nav-name">
 				
 					<a class='nav-link' href="/Magus/">
-						<span>Kujiji </span>
+						<span>Kuji </span>
 					</a>
 				</div>
 			</div>
@@ -146,7 +146,7 @@ crossorigin="anonymous"></script>
 				
 					<div class="nav-name">
 				
-					<a class='nav-link' href="/Hi/">
+					<a class='nav-link' href="/Idea/">
 						<span>Hi </span>
 					</a>
 				</div>
@@ -160,7 +160,7 @@ crossorigin="anonymous"></script>
 
 <div class='toc-container'>
 <i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li></ol>
 </div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/blue-shadow/toc.svg" alt="">
@@ -213,7 +213,7 @@ crossorigin="anonymous"></script>
 			<div class='nav-more-item'>
 					<div class="nav-name">
 						<a class='nav-link' href="/Magus/">
-							<span>Kujiji</span>
+							<span>Kuji</span>
 						</a>
 					</div>
 			</div>
@@ -224,7 +224,7 @@ crossorigin="anonymous"></script>
 		
 			<div class='nav-more-item'>
 					<div class="nav-name">
-						<a class='nav-link' href="/Hi/">
+						<a class='nav-link' href="/Idea/">
 							<span>Hi</span>
 						</a>
 					</div>
@@ -306,6 +306,10 @@ crossorigin="anonymous"></script>
     <ul>
             <li><i class='fa fa-calendar'></i> Sep 25, 2018</li>
             
+            <li class='comment-button'><a href='#article-comment'><i class='fa fa-comments'></i> <span id='article-comment-count'>0</span></a></li>
+            <li><i class="fa fa-eye"></i> <span id='article-visit-count'>0</span></li>
+            <li class='thumb-up-button' id='thumb-up-button'><i class="far fa-thumbs-up fa-lg" id='thumb-up-icon'></i> <span id='article-thumbup-count'>0</span></li>
+            
             <li><i class="fa fa-user"></i> Yuting Zhang</li>
             <li><i class="fas fa-copyright"></i>
             
@@ -373,9 +377,12 @@ crossorigin="anonymous"></script>
 </div>
 <div class="card-text">
   <p id='text-post-summary'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+Quick Start
+Create a new post
+1$ hexo new "My New Post"
 More info: Writing
-Run server1$ hexo...</p>
+Run server
+1$ hexo...</p>
 </div>
         </div> -->
     </div>
@@ -393,7 +400,7 @@ Run server1$ hexo...</p>
 
 <div class='toc-container'>
 <i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li></ol>
 </div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/blue-shadow/toc.svg" alt="">
@@ -402,13 +409,18 @@ Run server1$ hexo...</p>
     </div>
     <div class='article-content'>
     <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
     
@@ -421,10 +433,7 @@ Run server1$ hexo...</p>
 <h1>Comment</h1>
 
   
-    <div id="comment-not-available">
-      Not available
-      <p><strong>For site maintainer: Please provide <code>appId</code> and <code>appKey</code> in your <code>_data/cutie.yml</code> file for <code>valine</code> comment system.</strong></p>
-    </div>
+    <div id='valine'></div>
   
 
 
@@ -488,7 +497,7 @@ Run server1$ hexo...</p>
 
 <div class='toc-container'>
 <i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li></ol>
 </div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/blue-shadow/toc.svg" alt="">
@@ -541,7 +550,7 @@ Run server1$ hexo...</p>
 			<div class='nav-more-item'>
 					<div class="nav-name">
 						<a class='nav-link' href="/Magus/">
-							<span>Kujiji</span>
+							<span>Kuji</span>
 						</a>
 					</div>
 			</div>
@@ -552,7 +561,7 @@ Run server1$ hexo...</p>
 		
 			<div class='nav-more-item'>
 					<div class="nav-name">
-						<a class='nav-link' href="/Hi/">
+						<a class='nav-link' href="/Idea/">
 							<span>Hi</span>
 						</a>
 					</div>
@@ -571,6 +580,23 @@ Run server1$ hexo...</p>
 
 
     
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: '0',
+        appKey: '',
+        placeholder: '',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
 
 
 
@@ -604,10 +630,72 @@ Run server1$ hexo...</p>
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_b053b031b1229129edd084632e106aaed1b8f1869722d64825bf116c7fae7c47').update('hashit_2e0255200b8bb568c8ce4226573241addc0b787d25fdd9722a444533b8f96395', function(){});
+    new Postv2('hashit_b053b031b1229129edd084632e106aaed1b8f1869722d64825bf116c7fae7c47').update('hashit_6c47287f89fe38e1bd6065b79b2cf9a6b4698220384aca1be97ed18d29579fe5', function(){});
   });
   
 </script>
+
+
+    
+<script type='text/javascript'>
+  
+  // update cookie if this page is opened (directly)
+  function getIP(json) {
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+  loadjs.ready('post-visit-comment-count', function(){
+    
+    
+    LeanCloud.init('hGr8M8yiagYRvf5TaoyX01Ly-gzGzoHsz', 'fIaiI0SzClfCP4NeClKSwtQq');
+    var leanCloud = LeanCloud.getInstance();
+    leanCloud.fetchIsThumbUp('/2018/09/25/hello-world/', json.ip);
+    document.getElementById('thumb-up-button').addEventListener('click', function(e){
+      leanCloud.isThumbUp('/2018/09/25/hello-world/', function(isThumbUp){
+        console.log('is thumb up:' + isThumbUp);
+        if(isThumbUp){
+          leanCloud.removeThumbUpRecord('/2018/09/25/hello-world/', json.ip);
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+          
+        }else{
+          leanCloud.addThumbUpRecord('/2018/09/25/hello-world/', json.ip);
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }
+        leanCloud.getThumbUpCount('/2018/09/25/hello-world/', function(count){
+            console.log('thumb up count: ' + count)
+            var el = document.getElementById('article-thumbup-count');
+            if(el) el.innerHTML = count;
+        });
+      });
+    });
+    leanCloud.addVisitRecord('/2018/09/25/hello-world/', json.ip);
+    leanCloud.fetchCommentCount('/2018/09/25/hello-world/');
+    leanCloud.fetchVisitCount('/2018/09/25/hello-world/');
+    leanCloud.fetchThumbUpCount('/2018/09/25/hello-world/');
+    leanCloud.getCommentCount('/2018/09/25/hello-world/', function(count){
+        var el = document.querySelector('#article-comment-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getVisitCount('/2018/09/25/hello-world/', function(count){
+        var el = document.querySelector('#article-visit-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getThumbUpCount('/2018/09/25/hello-world/', function(count){
+        var el = document.getElementById('article-thumbup-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.isThumbUp('/2018/09/25/hello-world/', function(isThumbUp){
+        console.log('init thumb up:' + isThumbUp);
+        if(isThumbUp){
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }else{
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+        }
+    });
+  });
+  }
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 
 
 
@@ -622,7 +710,7 @@ initHeadroom();
 changeLayoutOnTouchScreen();
 
 // 
-// var post = new Post('', '');
+// var post = new Post('hGr8M8yiagYRvf5TaoyX01Ly-gzGzoHsz', 'fIaiI0SzClfCP4NeClKSwtQq');
 // post.getCommentCount(window.location.pathname, function(count){
 //     $('#article-comment-count').text(count);
 // });

@@ -132,7 +132,7 @@ crossorigin="anonymous"></script>
 					<div class="nav-name">
 				
 					<a class='nav-link' href="/Magus/">
-						<span>Kujiji </span>
+						<span>Kuji </span>
 					</a>
 				</div>
 			</div>
@@ -146,7 +146,7 @@ crossorigin="anonymous"></script>
 				
 					<div class="nav-name">
 				
-					<a class='nav-link' href="/Hi/">
+					<a class='nav-link' href="/Idea/">
 						<span>Hi </span>
 					</a>
 				</div>
@@ -199,7 +199,7 @@ crossorigin="anonymous"></script>
 			<div class='nav-more-item'>
 					<div class="nav-name">
 						<a class='nav-link' href="/Magus/">
-							<span>Kujiji</span>
+							<span>Kuji</span>
 						</a>
 					</div>
 			</div>
@@ -210,7 +210,7 @@ crossorigin="anonymous"></script>
 		
 			<div class='nav-more-item'>
 					<div class="nav-name">
-						<a class='nav-link' href="/Hi/">
+						<a class='nav-link' href="/Idea/">
 							<span>Hi</span>
 						</a>
 					</div>
@@ -271,6 +271,15 @@ crossorigin="anonymous"></script>
 						</a>
 					</li>
 					
+					
+					<li>
+						<a href="/2018/09/25/hello-world/#article-comment">
+							<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-eye"></i> <span class='card-visit-count'>0</span>
+					</li>
 					
 					
 			</ul>
@@ -383,7 +392,7 @@ crossorigin="anonymous"></script>
 			<div class='nav-more-item'>
 					<div class="nav-name">
 						<a class='nav-link' href="/Magus/">
-							<span>Kujiji</span>
+							<span>Kuji</span>
 						</a>
 					</div>
 			</div>
@@ -394,7 +403,7 @@ crossorigin="anonymous"></script>
 		
 			<div class='nav-more-item'>
 					<div class="nav-name">
-						<a class='nav-link' href="/Hi/">
+						<a class='nav-link' href="/Idea/">
 							<span>Hi</span>
 						</a>
 					</div>
@@ -413,6 +422,23 @@ crossorigin="anonymous"></script>
 
 
     
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: '0',
+        appKey: '',
+        placeholder: '',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
 
 
 
@@ -461,6 +487,55 @@ crossorigin="anonymous"></script>
 </script>
 
 
+    
+<script type='text/javascript'>
+  
+    function getIP(json) {
+      loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+    loadjs.ready('post-visit-comment-count', {
+      success: function(){
+          LeanCloud.init('hGr8M8yiagYRvf5TaoyX01Ly-gzGzoHsz', 'fIaiI0SzClfCP4NeClKSwtQq');
+          var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2018/09/25/hello-world/', json.ip);
+          leanCloud.fetchCommentCount('/2018/09/25/hello-world/');
+          leanCloud.fetchVisitCount('/2018/09/25/hello-world/');
+          leanCloud.fetchThumbUpCount('/2018/09/25/hello-world/');
+          leanCloud.getCommentCount('/2018/09/25/hello-world/', function(count){
+              var el = document.querySelector('#hashit_b053b031b1229129edd084632e106aaed1b8f1869722d64825bf116c7fae7c47 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2018/09/25/hello-world/', function(count){
+              var el = document.querySelector('#hashit_b053b031b1229129edd084632e106aaed1b8f1869722d64825bf116c7fae7c47 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2018/09/25/hello-world/', function(count){
+              var el = document.querySelector('#hashit_b053b031b1229129edd084632e106aaed1b8f1869722d64825bf116c7fae7c47 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2018/09/25/hello-world/', function(isThumbUp){
+              var el = document.querySelector('#hashit_b053b031b1229129edd084632e106aaed1b8f1869722d64825bf116c7fae7c47 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+      }
+    })
+    }
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
 
 <!-- <script src="/js/post.js"></script> -->
 
@@ -473,7 +548,7 @@ initHeadroom();
 changeLayoutOnTouchScreen();
 
 // 
-// var post = new Post('', '');
+// var post = new Post('hGr8M8yiagYRvf5TaoyX01Ly-gzGzoHsz', 'fIaiI0SzClfCP4NeClKSwtQq');
 // $('.Card-archive').each(function(){
 //     var post_url = $(this).attr('id');
 //     var true_url = $(this).find('.Card-title a').first().attr('href');
